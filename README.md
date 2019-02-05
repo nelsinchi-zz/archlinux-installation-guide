@@ -297,9 +297,9 @@ $ modprobe b43
 $ mkinitcpio -p linux
 ```
 
-***Sound:***
+***Multimedia:***
 ```
-$ aurman -S pulseaudio pulseaudio-equalizer pulseaudio-gconf pulseaudio-jack pulseaudio-lirc
+$ aurman -S vlc mplayer pulseaudio pulseaudio-equalizer pulseaudio-gconf pulseaudio-jack pulseaudio-lirc
 ```
 
 ***Installing Amarok:***
