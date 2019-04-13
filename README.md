@@ -7,7 +7,7 @@
 2- System Configuration
 3- Keyboard Configuration -OPTIONAL-
 4- GRUB Bootloader
-5- Graphic User Interface
+5- Graphical User Interface
 6- Desktop Environment
 7- Time Zone Set
 8- Protect Your Linux
@@ -70,7 +70,7 @@ $ echo arch-linux > /etc/hostname
 
 ***Add User:***
 ```
-$ useradd -m -g users -G wheel -s /bin/bash -m -c "[username]'s full name" [username] && passwd [username]
+$ useradd -m -g users -G wheel -s /bin/bash -m -c "username's full name" [username] && passwd [username]
 ```
 or maybe you want to create the user and add this one to the common groups `$ useradd -G audio,lp,scanner,optical,storage,video,wheel,games,power,http -s /bin/bash -m -c “[username]'s full name” [username] && passwd [username]`.
 
@@ -81,17 +81,17 @@ Edit `/etc/sudoers` file and uncomment the next line:
 ```
 if you are using VI, save the file with `:wq!`
 
-***To delete user accounts:***
+***To delete user accounts (Only if it's needed):***
 ```
 # userdel -r [username]
 ```
 
-***Add user to a group:***
+***Add user to a group (Only if it's needed):***
 ```
 # gpasswd -a [user] [group]
 ```
 
-***Remove user from a group:***
+***Remove user from a group (Only if it's needed):***
 ```
 # gpasswd -d [user] [group]
 ```
@@ -179,13 +179,13 @@ $ umount /mnt
 $ reboot
 ```
 
-***Note: Don't forget to remove the Archlinux Installer at this point.***
+***Note: Don't forget to remove the Arch Linux Installer at this point.***
 
 ## *End - GRUB Bootloader*
 
 
 --------------------------------
-# **5- Graphic User Interface**
+# **5- Graphical User Interface**
 --------------------------------
 Edit and customize `vi /etc/pacman.conf` and uncomment out `[multilib]`, then review how is called the network interface
 ```
@@ -218,6 +218,7 @@ $ pacman -S networkmanager
 $ systemctl enable NetworkManager
 $ systemctl start NetworkManager
 $ nmcli con mod <connectionName> ipv4.dns "8.8.8.8 8.8.4.4"       ## Optional
+$ systemctl restart NetworkManager
 ```
 
 Before reboot the machine, don't forget to enable onboot from `vi /etc/NetworkManager/system-connections/<connectionName>.nmconnection` in `autoconnect=true` parameter.
@@ -230,7 +231,7 @@ $ pacman -S xorg xorg-server xorg-apps xorg-xinit xorg-twm vim xterm unrar unzip
 
 If you have old video card Nvidia: `pacman -S nvidia-340xx-lts nvidia-340xx-utils`
 
-- Installing archlinux with dual graphics cards:
+- Installing Arch Linux with dual graphics cards:
 https://wiki.archlinux.org/index.php/Bumblebee#Installing_Bumblebee_with_Intel.2FNVIDIA
 
 ***Note: don't forget to test the Graphic User Interface before rebooting the machine.***
@@ -238,7 +239,7 @@ https://wiki.archlinux.org/index.php/Bumblebee#Installing_Bumblebee_with_Intel.2
 $ startx
 ```
 
-## *End - Graphic User Interface*
+## *End - Graphical User Interface*
 
 
 -----------------------------
@@ -369,7 +370,7 @@ $ ufw enable
 ```
 
 Make some rules:
-***NOTE: VERY RECOMMENDED is add SSH access to a different port that the default one***, don't forget include the new port into `/etc/ssh/sshd_config` file and also if it is required make the port forwarding entry into the router.
+***NOTE: VERY RECOMMENDED is add SSH access to a different port that the default one to avoid connection attacks when the standard 22 is open***, don't forget include the new port into `/etc/ssh/sshd_config` file and also if it is required make the port forwarding entry into the router.
 ```
 $ ufw deny SSH comment 'Default SSH port (22) blocked'
 $ ufw allow [new SSH port] comment 'For NEW SSH port assigned'
