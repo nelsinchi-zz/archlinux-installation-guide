@@ -277,19 +277,19 @@ For mirrors (mainly in China), see https://github.com/archlinuxcn/mirrorlist-rep
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
 ```
 
-Also, install `aurman` (yaourt replacement) to be able to install AUR packages:
+Also, install `yay` (yaourt or aurman replacement) to be able to install AUR packages:
 ```
-$ pacman -S aurman
+$ pacman -S yay
 ```
 
 ***For Laptops and WiFi:***
 Use wireless network, it needs a working network to install the broadcom-wl-dkms. Then run wifi-menu to connect to WIFI. It works with great performance!
 ```
-$ aurman -S broadcom-wl-dkms
+$ yay -S broadcom-wl-dkms
 ```
 or
 ```
-$ aurman -S b43-firmware
+$ yay -S b43-firmware
 ```
 Then, you need to add the module to the /etc/mkinitcpio.conf "b43"
 Then, you need to run
@@ -300,12 +300,12 @@ $ mkinitcpio -p linux
 
 ***Multimedia:***
 ```
-$ aurman -S vlc mplayer pulseaudio pulseaudio-equalizer pulseaudio-gconf pulseaudio-jack pulseaudio-lirc
+$ yay -S vlc mplayer pulseaudio pulseaudio-equalizer pulseaudio-gconf pulseaudio-jack pulseaudio-lirc
 ```
 
 ***Installing Amarok:***
 ```
-aurman -S amarok libgpod loudmouth ifuse libmygpo-qt clamz gst-libav gtk-sharp-2
+yay -S amarok libgpod loudmouth ifuse libmygpo-qt clamz gst-libav gtk-sharp-2
 ```
 
 ***Installing VirtualBox***
@@ -317,22 +317,22 @@ sudo pacman -S virtualbox virtualbox-ext-vnc virtualbox-host-dkms virtualbox-gue
 
 ***Installing LibreOffice and Office Components:***
 ```
-$ aurman -S libreoffice-fresh libreoffice-fresh-es libreoffice-extension-texmaths libreoffice-extension-writer2latex hunspell hunspell-es hunspell-en hyphen hyphen-es hyphen-en libmythes mythes-en mythes-es languagetool
+$ yay -S libreoffice-fresh libreoffice-fresh-es libreoffice-extension-texmaths libreoffice-extension-writer2latex hunspell hunspell-es hunspell-en hyphen hyphen-es hyphen-en libmythes mythes-en mythes-es languagetool
 ```
 
 ***Installing Internet Browsers and Flash Player support on Opera/Chromium/Chrome/Vivaldi***
 ```
-$ aurman -S opera opera-ffmpeg-codecs firefox vivaldi chromium google-chrome pepper-flash ttf-dejavu ttf-freefont ttf-liberation ttf-bitstream-vera ttf-linux-libertine ttf-droid ttf-ubuntu-font-family ttf-oxygen noto-fonts ttf-croscore ttf-ms-fonts terminus-font flashplugin
+$ yay -S opera opera-ffmpeg-codecs firefox vivaldi chromium google-chrome pepper-flash ttf-dejavu ttf-freefont ttf-liberation ttf-bitstream-vera ttf-linux-libertine ttf-droid ttf-ubuntu-font-family ttf-oxygen noto-fonts ttf-croscore ttf-ms-fonts terminus-font flashplugin
 ```
 
 ***Installing useful apps and common components***
 ```
-$ aurman -S octopi gist skype teamviewer dropbox turtl sublime-text lib32-alsa-plugins pavucontrol lib32-libcanberra xclip xsel lib32-jack lib32-libsamplerate lib32-speex lib32-libcanberra-pulse openshot libopenshot-audio openshot frei0r-plugins libquicktime libavc1394 faac jack jack-rack python-opengl python-dbus qt5-serialport python-pyqt4 aic94xx-firmware wd719x-firmware trillian filezilla
+$ yay -S octopi gist skype teamviewer dropbox turtl sublime-text lib32-alsa-plugins pavucontrol lib32-libcanberra xclip xsel lib32-jack lib32-libsamplerate lib32-speex lib32-libcanberra-pulse openshot libopenshot-audio openshot frei0r-plugins libquicktime libavc1394 faac jack jack-rack python-opengl python-dbus qt5-serialport python-pyqt4 aic94xx-firmware wd719x-firmware trillian filezilla
 ```
 
 ***Installing a Very Nice theme which is called Papirus:***
 ```
-$ aurman -S papirus-aurorae-theme papirus-color-scheme papirus-gtk-theme papirus-icon-theme-kde papirus-konsole-colorscheme papirus-look-and-feel papirus-plasma-theme papirus-sddm-theme arc-dark-suite papirus-bomi-skin papirus-k3b-theme papirus-kmail-theme papirus-libreoffice-theme papirus-qtcurve-theme papirus-smplayer-theme papirus-vlc-theme papirus-wallpapers papirus-yakuake-theme
+$ yay -S papirus-aurorae-theme papirus-color-scheme papirus-gtk-theme papirus-icon-theme-kde papirus-konsole-colorscheme papirus-look-and-feel papirus-plasma-theme papirus-sddm-theme arc-dark-suite papirus-bomi-skin papirus-k3b-theme papirus-kmail-theme papirus-libreoffice-theme papirus-qtcurve-theme papirus-smplayer-theme papirus-vlc-theme papirus-wallpapers papirus-yakuake-theme
 ```
 
 ## *End - Desktop Environment*
