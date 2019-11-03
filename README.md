@@ -268,8 +268,9 @@ $ reboot
 Add the following to `vi /etc/pacman.conf` at the end of the file:
 ```
 [archlinuxcn]
-SigLevel = Optional TrustedOnly
-Server = https://cdn.repo.archlinuxcn.org/$arch
+Server = http://repo.archlinuxcn.org/$arch
+## or install archlinuxcn-mirrorlist-git and use the mirrorlist
+#Include = /etc/pacman.d/archlinuxcn-mirrorlist
 ```
 
 For mirrors (mainly in China), see https://github.com/archlinuxcn/mirrorlist-repo. To add PGP Keys:
