@@ -53,8 +53,8 @@ $ swapon /dev/sdaX
 
 ***For Installing Basic OS:***
 ```
-$ pacstrap /mnt base base-devel linux-headers ntfs-3g mlocate net-tools openssh bind-tools
-$ genfstab -p /mnt >> /mnt/etc/fstab
+$ pacstrap /mnt base base-devel linux linux-firmware linux-headers ntfs-3g mlocate net-tools openssh bind-tools nmap
+$ genfstab -U /mnt >> /mnt/etc/fstab
 ```
 ## *End - Partitions Configuration*
 
