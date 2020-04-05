@@ -309,12 +309,24 @@ $ yay -S vlc mplayer pulseaudio pulseaudio-equalizer pulseaudio-gconf pulseaudio
 yay -S amarok libgpod loudmouth ifuse libmygpo-qt clamz gst-libav gtk-sharp-2
 ```
 
-***Installing VirtualBox***
-```
-sudo pacman -S virtualbox virtualbox-ext-vnc virtualbox-host-dkms virtualbox-guest-iso vde2 net-tools tigervnc
-```
+***Installing KVM/QEMU/Virt-Manager (VirtualBox replacement)***
 
-***Note: Don't forget to install extensions pack from the VirtualBox website.***
+```
+yay -S qemu virt-manager ebtables dnsmasq bridge-utils openbsd-netcat firewalld dmidecode
+```
+```
+sudo usermod -G libvirt -a [user]
+```
+```
+sudo systemctl enable libvirtd && sudo systemctl start libvirtd
+```
+```
+sudo systemctl status libvirtd
+```
+How to convert VirtualBox images to be used in Virt-Manager:
+```
+sudo qemu-img convert -f vdi -0 qcow2 vitual_machine.vdi virtual_machine.qcow2
+```
 
 ***Installing LibreOffice and Office Components:***
 ```
