@@ -314,6 +314,11 @@ yay -S amarok libgpod loudmouth ifuse libmygpo-qt clamz gst-libav gtk-sharp-2
 ```
 yay -S qemu virt-manager ebtables dnsmasq bridge-utils openbsd-netcat firewalld dmidecode
 ```
+For drivers support in Windows OS Guest, install the `virtio-win` AUR package and once Windows OS is installed, mount `/usr/share/virtio/virtio-win.iso` to install Windows OS drivers:
+```
+yay -S virtio-win
+```
+Prepare Virt-Manager to work with the user:
 ```
 sudo usermod -G libvirt -a [user]
 ```
